@@ -1,0 +1,1677 @@
+Last login: Tue Jan  9 14:06:05 on console
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Manwinders-MBP:~ Manroop$ git
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+Manwinders-MBP:~ Manroop$ git --version
+git version 2.37.1 (Apple Git-137.1)
+Manwinders-MBP:~ Manroop$ git init
+Initialized empty Git repository in /Users/Manroop/.git/
+Manwinders-MBP:~ Manroop$ git status
+warning: could not open directory '.Trash/': Operation not permitted
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.CFUserTextEncoding
+	.DS_Store
+	.bash_history
+	.bash_sessions/
+	.profile
+	.vscode/
+	.wdc/
+	211 west saratoga
+	3.3 CSS Box Model.html
+	3.3 CSS Box Model_files/
+	4.4 Arrays.html
+	4.4 Arrays_files/
+	Applications/
+	Desktop/
+	Documents/
+	Downloads/
+	Library/
+	Movies/
+	Music/
+	Pictures/
+	Public/
+	first/
+	tic tac toe game.js
+
+
+It took 11.84 seconds to enumerate untracked files. 'status -uno'
+may speed it up, but you have to be careful not to forget to add
+new files yourself (see 'git help status').
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:~ Manroop$ git status
+warning: could not open directory '.Trash/': Operation not permitted
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.CFUserTextEncoding
+	.DS_Store
+	.bash_history
+	.bash_sessions/
+	.profile
+	.vscode/
+	.wdc/
+	211 west saratoga
+	3.3 CSS Box Model.html
+	3.3 CSS Box Model_files/
+	4.4 Arrays.html
+	4.4 Arrays_files/
+	Applications/
+	Desktop/
+	Documents/
+	Downloads/
+	Library/
+	Movies/
+	Music/
+	Pictures/
+	Public/
+	first/
+	tic tac toe game.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:~ Manroop$ cd..
+-bash: cd..: command not found
+Manwinders-MBP:~ Manroop$ cd ..
+Manwinders-MBP:Users Manroop$ cd ..
+Manwinders-MBP:/ Manroop$ git status
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:/ Manroop$ ls
+Applications	System		Volumes		cores		etc		opt		sbin		usr
+Library		Users		bin		dev		home		private		tmp		var
+Manwinders-MBP:/ Manroop$ git init
+/.git: Read-only file system
+Manwinders-MBP:/ Manroop$ ls - a
+ls: -: No such file or directory
+ls: a: No such file or directory
+Manwinders-MBP:/ Manroop$ ls -a
+.			.file			Library			Volumes			dev			opt			tmp
+..			.vol			System			bin			etc			private			usr
+.VolumeIcon.icns	Applications		Users			cores			home			sbin			var
+Manwinders-MBP:/ Manroop$ clear
+
+Manwinders-MBP:/ Manroop$ git init
+/.git: Read-only file system
+Manwinders-MBP:/ Manroop$ git status
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:/ Manroop$ ls
+Applications	System		Volumes		cores		etc		opt		sbin		usr
+Library		Users		bin		dev		home		private		tmp		var
+Manwinders-MBP:/ Manroop$ git init
+/.git: Read-only file system
+Manwinders-MBP:/ Manroop$ cd ~
+Manwinders-MBP:~ Manroop$ git init
+Reinitialized existing Git repository in /Users/Manroop/.git/
+Manwinders-MBP:~ Manroop$ git status
+warning: could not open directory '.Trash/': Operation not permitted
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.CFUserTextEncoding
+	.DS_Store
+	.bash_history
+	.bash_sessions/
+	.profile
+	.vscode/
+	.wdc/
+	211 west saratoga
+	3.3 CSS Box Model.html
+	3.3 CSS Box Model_files/
+	4.4 Arrays.html
+	4.4 Arrays_files/
+	Applications/
+	Desktop/
+	Documents/
+	Downloads/
+	Library/
+	Movies/
+	Music/
+	Pictures/
+	Public/
+	first/
+	tic tac toe game.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:~ Manroop$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+Manwinders-MBP:~ Manroop$ hint
+-bash: hint: command not found
+Manwinders-MBP:~ Manroop$ cd
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	4.4 Arrays.html		Desktop			Library			Pictures		tic tac toe game.js
+3.3 CSS Box Model.html	4.4 Arrays_files	Documents		Movies			Public
+3.3 CSS Box Model_files	Applications		Downloads		Music			first
+Manwinders-MBP:~ Manroop$ ls -a
+.			.Trash			.profile		3.3 CSS Box Model.html	Applications		Library			Public
+..			.bash_history		.vscode			3.3 CSS Box Model_files	Desktop			Movies			first
+.CFUserTextEncoding	.bash_sessions		.wdc			4.4 Arrays.html		Documents		Music			tic tac toe game.js
+.DS_Store		.git			211 west saratoga	4.4 Arrays_files	Downloads		Pictures
+Manwinders-MBP:~ Manroop$ clear
+
+Manwinders-MBP:~ Manroop$ git statis
+git: 'statis' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
+Manwinders-MBP:~ Manroop$ git status
+warning: could not open directory '.Trash/': Operation not permitted
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.CFUserTextEncoding
+	.DS_Store
+	.bash_history
+	.bash_sessions/
+	.profile
+	.vscode/
+	.wdc/
+	211 west saratoga
+	3.3 CSS Box Model.html
+	3.3 CSS Box Model_files/
+	4.4 Arrays.html
+	4.4 Arrays_files/
+	Applications/
+	Desktop/
+	Documents/
+	Downloads/
+	Library/
+	Movies/
+	Music/
+	Pictures/
+	Public/
+	first/
+	tic tac toe game.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:~ Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:~ Manroop$ git status
+warning: could not open directory '.Trash/': Operation not permitted
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.CFUserTextEncoding
+	.DS_Store
+	.bash_history
+	.bash_sessions/
+	.profile
+	.vscode/
+	.wdc/
+	211 west saratoga
+	3.3 CSS Box Model.html
+	3.3 CSS Box Model_files/
+	4.4 Arrays.html
+	4.4 Arrays_files/
+	Applications/
+	Desktop/
+	Documents/
+	Downloads/
+	Library/
+	Movies/
+	Music/
+	Pictures/
+	Public/
+	first/
+	tic tac toe game.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:~ Manroop$ ls -a
+.			.Trash			.profile		3.3 CSS Box Model.html	Applications		Library			Public
+..			.bash_history		.vscode			3.3 CSS Box Model_files	Desktop			Movies			first
+.CFUserTextEncoding	.bash_sessions		.wdc			4.4 Arrays.html		Documents		Music			tic tac toe game.js
+.DS_Store		.git			211 west saratoga	4.4 Arrays_files	Downloads		Pictures
+Manwinders-MBP:~ Manroop$ mkdir practice
+Manwinders-MBP:~ Manroop$ cd practice
+Manwinders-MBP:practice Manroop$ touch practice.txt
+Manwinders-MBP:practice Manroop$ ls
+practice.txt
+Manwinders-MBP:practice Manroop$ cd practice.txt
+-bash: cd: practice.txt: Not a directory
+Manwinders-MBP:practice Manroop$ open practice.txt
+Manwinders-MBP:practice Manroop$ git status
+warning: could not open directory '.Trash/': Operation not permitted
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.CFUserTextEncoding
+	../.DS_Store
+	../.bash_history
+	../.bash_sessions/
+	../.profile
+	../.vscode/
+	../.wdc/
+	../211 west saratoga
+	../3.3 CSS Box Model.html
+	../3.3 CSS Box Model_files/
+	../4.4 Arrays.html
+	../4.4 Arrays_files/
+	../Applications/
+	../Desktop/
+	../Documents/
+	../Downloads/
+	../Library/
+	../Movies/
+	../Music/
+	../Pictures/
+	../Public/
+	../first/
+	./
+	../tic tac toe game.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:practice Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ rm -rf .git
+Manwinders-MBP:~ Manroop$ ls -a
+.			.Trash			.vscode			3.3 CSS Box Model_files	Desktop			Movies			first
+..			.bash_history		.wdc			4.4 Arrays.html		Documents		Music			practice
+.CFUserTextEncoding	.bash_sessions		211 west saratoga	4.4 Arrays_files	Downloads		Pictures		tic tac toe game.js
+.DS_Store		.profile		3.3 CSS Box Model.html	Applications		Library			Public
+Manwinders-MBP:~ Manroop$ clear
+
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	4.4 Arrays.html		Desktop			Library			Pictures		practice
+3.3 CSS Box Model.html	4.4 Arrays_files	Documents		Movies			Public			tic tac toe game.js
+3.3 CSS Box Model_files	Applications		Downloads		Music			first
+Manwinders-MBP:~ Manroop$ cd practice
+Manwinders-MBP:practice Manroop$ git status
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:practice Manroop$ git init
+Initialized empty Git repository in /Users/Manroop/practice/.git/
+Manwinders-MBP:practice Manroop$ ls
+practice.txt
+Manwinders-MBP:practice Manroop$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	practice.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:practice Manroop$ git add <practice.txt>
+-bash: syntax error near unexpected token `newline'
+Manwinders-MBP:practice Manroop$ touch index.html
+Manwinders-MBP:practice Manroop$ ls
+index.html	practice.txt
+Manwinders-MBP:practice Manroop$ git add index.html
+Manwinders-MBP:practice Manroop$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	practice.txt
+
+Manwinders-MBP:practice Manroop$ ls
+index.html	practice.txt
+Manwinders-MBP:practice Manroop$ rm practice.txt
+Manwinders-MBP:practice Manroop$ ls
+index.html
+Manwinders-MBP:practice Manroop$ git commit -m "create index.html"
+[main (root-commit) defc66e] create index.html
+ Committer: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+Manwinders-MBP:practice Manroop$ git status
+On branch main
+nothing to commit, working tree clean
+Manwinders-MBP:practice Manroop$ git log
+commit defc66ecc1a9e8f63e2d25d2d8cb1dbd34ef0e95 (HEAD -> main)
+Author: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Tue Jan 9 17:34:57 2024 -0500
+
+    create index.html
+Manwinders-MBP:practice Manroop$ clear
+
+Manwinders-MBP:practice Manroop$ git add .
+Manwinders-MBP:practice Manroop$ git status
+On branch main
+nothing to commit, working tree clean
+Manwinders-MBP:practice Manroop$ touch index.html
+Manwinders-MBP:practice Manroop$ ls
+index.html
+Manwinders-MBP:practice Manroop$ touch app.js
+Manwinders-MBP:practice Manroop$ ls
+app.js		index.html
+Manwinders-MBP:practice Manroop$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	app.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:practice Manroop$ git add app.js
+Manwinders-MBP:practice Manroop$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   app.js
+
+Manwinders-MBP:practice Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:practice Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ cd ..
+Manwinders-MBP:Users Manroop$ cd ~
+Manwinders-MBP:~ Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:~ Manroop$ mkdir learn_git_again
+Manwinders-MBP:~ Manroop$ cd learn_git_again
+Manwinders-MBP:learn_git_again Manroop$ touch third.txt
+Manwinders-MBP:learn_git_again Manroop$ git status
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:learn_git_again Manroop$ git add third.txt
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:learn_git_again Manroop$ ls
+third.txt
+Manwinders-MBP:learn_git_again Manroop$ git status\
+> clear
+git: 'statusclear' is not a git command. See 'git --help'.
+Manwinders-MBP:learn_git_again Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:learn_git_again Manroop$ ls
+third.txt
+Manwinders-MBP:learn_git_again Manroop$ git status
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:learn_git_again Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ git status
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	3.3 CSS Box Model_files	4.4 Arrays_files	Desktop			Downloads		Movies			Pictures		first			practice
+3.3 CSS Box Model.html	4.4 Arrays.html		Applications		Documents		Library			Music			Public			learn_git_again		tic tac toe game.js
+Manwinders-MBP:~ Manroop$ cd learn_git_again
+Manwinders-MBP:learn_git_again Manroop$ ls
+third.txt
+Manwinders-MBP:learn_git_again Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:learn_git_again Manroop$ git init
+Initialized empty Git repository in /Users/Manroop/learn_git_again/.git/
+Manwinders-MBP:learn_git_again Manroop$ ls
+third.txt
+Manwinders-MBP:learn_git_again Manroop$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:learn_git_again Manroop$ ls -a
+.		..		.git		third.txt
+Manwinders-MBP:learn_git_again Manroop$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:learn_git_again Manroop$ git add third.txt
+Manwinders-MBP:learn_git_again Manroop$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   third.txt
+
+Manwinders-MBP:learn_git_again Manroop$ git commit -m "adding third.txt"
+[main (root-commit) 0d32ad7] adding third.txt
+ Committer: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+Manwinders-MBP:learn_git_again Manroop$ git status
+On branch main
+nothing to commit, working tree clean
+Manwinders-MBP:learn_git_again Manroop$ git log
+commit 0d32ad7a8477736aaf67655334bd61081642da79 (HEAD -> main)
+Author: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Tue Jan 9 18:44:29 2024 -0500
+
+    adding third.txt
+Manwinders-MBP:learn_git_again Manroop$ touch fourth.txt
+Manwinders-MBP:learn_git_again Manroop$ ls
+fourth.txt	third.txt
+Manwinders-MBP:learn_git_again Manroop$ git add fourth.txt
+Manwinders-MBP:learn_git_again Manroop$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   fourth.txt
+
+Manwinders-MBP:learn_git_again Manroop$ git commit -m "adding fourth.txt"
+[main 9231bfc] adding fourth.txt
+ Committer: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+Manwinders-MBP:learn_git_again Manroop$ rm third.txt
+Manwinders-MBP:learn_git_again Manroop$ ls
+fourth.txt
+Manwinders-MBP:learn_git_again Manroop$ git add .
+Manwinders-MBP:learn_git_again Manroop$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    third.txt
+
+Manwinders-MBP:learn_git_again Manroop$ git commit -m "removing third.txt"
+[main 776f937] removing third.txt
+ Committer: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+Manwinders-MBP:learn_git_again Manroop$ git log
+commit 776f9370ec089ea658e6fb8706188f729ba7d4a6 (HEAD -> main)
+Author: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Tue Jan 9 18:50:02 2024 -0500
+
+    removing third.txt
+
+commit 9231bfc8ae329c73dbc535c7f417556b4e407c33
+Author: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Tue Jan 9 18:47:59 2024 -0500
+
+    adding fourth.txt
+
+commit 0d32ad7a8477736aaf67655334bd61081642da79
+Author: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Tue Jan 9 18:44:29 2024 -0500
+
+    adding third.txt
+Manwinders-MBP:learn_git_again Manroop$ git config --global core.pager cat
+Manwinders-MBP:learn_git_again Manroop$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+Manwinders-MBP:learn_git_again Manroop$ git config --global --list
+core.pager=cat
+Manwinders-MBP:learn_git_again Manroop$ clear
+
+Manwinders-MBP:learn_git_again Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	3.3 CSS Box Model_files	4.4 Arrays_files	Desktop			Downloads		Movies			Pictures		first			practice
+3.3 CSS Box Model.html	4.4 Arrays.html		Applications		Documents		Library			Music			Public			learn_git_again		tic tac toe game.js
+Manwinders-MBP:~ Manroop$ rm -rf learn_git
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	3.3 CSS Box Model_files	4.4 Arrays_files	Desktop			Downloads		Movies			Pictures		first			practice
+3.3 CSS Box Model.html	4.4 Arrays.html		Applications		Documents		Library			Music			Public			learn_git_again		tic tac toe game.js
+Manwinders-MBP:~ Manroop$ rm -rf learn_git_again
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	3.3 CSS Box Model_files	4.4 Arrays_files	Desktop			Downloads		Movies			Pictures		first			tic tac toe game.js
+3.3 CSS Box Model.html	4.4 Arrays.html		Applications		Documents		Library			Music			Public			practice
+Manwinders-MBP:~ Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:~ Manroop$ mkdir learn_git_Again
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	3.3 CSS Box Model_files	4.4 Arrays_files	Desktop			Downloads		Movies			Pictures		first			practice
+3.3 CSS Box Model.html	4.4 Arrays.html		Applications		Documents		Library			Music			Public			learn_git_Again		tic tac toe game.js
+Manwinders-MBP:~ Manroop$ cd learn_git_Again
+Manwinders-MBP:learn_git_Again Manroop$ touch third.txt
+Manwinders-MBP:learn_git_Again Manroop$ git init
+Initialized empty Git repository in /Users/Manroop/learn_git_Again/.git/
+Manwinders-MBP:learn_git_Again Manroop$ git add third.txt
+Manwinders-MBP:learn_git_Again Manroop$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   third.txt
+
+Manwinders-MBP:learn_git_Again Manroop$ git commit -m "adding third.txt"
+[main (root-commit) 5f3927d] adding third.txt
+ Committer: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+Manwinders-MBP:learn_git_Again Manroop$ touch fourth.txt
+Manwinders-MBP:learn_git_Again Manroop$ ls
+fourth.txt	third.txt
+Manwinders-MBP:learn_git_Again Manroop$ git add fourth.txt
+Manwinders-MBP:learn_git_Again Manroop$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   fourth.txt
+
+Manwinders-MBP:learn_git_Again Manroop$ git commit -m "adding fourth.txt"
+[main de64c93] adding fourth.txt
+ Committer: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+Manwinders-MBP:learn_git_Again Manroop$ rm third.txt
+Manwinders-MBP:learn_git_Again Manroop$ ls
+fourth.txt
+Manwinders-MBP:learn_git_Again Manroop$ git status .
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Manwinders-MBP:learn_git_Again Manroop$ git commit -m "removing third.txt"
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Manwinders-MBP:learn_git_Again Manroop$ git add .
+Manwinders-MBP:learn_git_Again Manroop$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    third.txt
+
+Manwinders-MBP:learn_git_Again Manroop$ git commit -m "removing third.txt"
+[main 8223bdd] removing third.txt
+ Committer: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+Manwinders-MBP:learn_git_Again Manroop$ git log
+commit 8223bddf424cafad844f5257beb26b39a6a3bf54 (HEAD -> main)
+Author: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Tue Jan 9 19:11:12 2024 -0500
+
+    removing third.txt
+
+commit de64c9388c6e7297eae87118f1591a854a3126c6
+Author: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Tue Jan 9 19:08:16 2024 -0500
+
+    adding fourth.txt
+
+commit 5f3927d10ac99431ba3dfb97ce5e9c0eb4eca89b
+Author: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Tue Jan 9 19:07:22 2024 -0500
+
+    adding third.txt
+Manwinders-MBP:learn_git_Again Manroop$ git config --global core.pager cat
+Manwinders-MBP:learn_git_Again Manroop$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+Manwinders-MBP:learn_git_Again Manroop$ git config --list
+credential.helper=osxkeychain
+init.defaultbranch=main
+core.pager=cat
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+Manwinders-MBP:learn_git_Again Manroop$ git config --global --list
+core.pager=cat
+Manwinders-MBP:learn_git_Again Manroop$ clear
+
+Manwinders-MBP:learn_git_Again Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ mkdir learn_branching
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	4.4 Arrays_files	Downloads		Pictures		learn_git_Again
+3.3 CSS Box Model.html	Applications		Library			Public			practice
+3.3 CSS Box Model_files	Desktop			Movies			first			tic tac toe game.js
+4.4 Arrays.html		Documents		Music			learn_branching
+Manwinders-MBP:~ Manroop$ cd learn_branching
+Manwinders-MBP:learn_branching Manroop$ git init
+Initialized empty Git repository in /Users/Manroop/learn_branching/.git/
+Manwinders-MBP:learn_branching Manroop$ touch first.txt
+Manwinders-MBP:learn_branching Manroop$ git add .
+Manwinders-MBP:learn_branching Manroop$ git commit -m "initial commit"
+[main (root-commit) 1289d3a] initial commit
+ Committer: Manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+Manwinders-MBP:learn_branching Manroop$ git config --global user.name "manroop"
+Manwinders-MBP:learn_branching Manroop$ git checkout -b feature
+Switched to a new branch 'feature'
+Manwinders-MBP:learn_branching Manroop$ touch new.txt
+Manwinders-MBP:learn_branching Manroop$ git add .
+Manwinders-MBP:learn_branching Manroop$ git commit -m "adding new.txt"
+[feature 497daff] adding new.txt
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+Manwinders-MBP:learn_branching Manroop$ git add .
+Manwinders-MBP:learn_branching Manroop$ git commit -m "adding another text"
+On branch feature
+nothing to commit, working tree clean
+Manwinders-MBP:learn_branching Manroop$ git merge feature
+Already up to date.
+Manwinders-MBP:learn_branching Manroop$ git branch -d feature
+error: Cannot delete branch 'feature' checked out at '/Users/Manroop/learn_branching'
+Manwinders-MBP:learn_branching Manroop$ git checkout main
+Switched to branch 'main'
+Manwinders-MBP:learn_branching Manroop$ git merge feature
+Updating 1289d3a..497daff
+Fast-forward
+ new.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+Manwinders-MBP:learn_branching Manroop$ git branch -d feature
+Deleted branch feature (was 497daff).
+Manwinders-MBP:learn_branching Manroop$ git log --oneline --decorate
+497daff (HEAD -> main) adding new.txt
+1289d3a initial commit
+Manwinders-MBP:learn_branching Manroop$ clear
+
+Manwinders-MBP:learn_branching Manroop$ ls
+first.txt	new.txt
+Manwinders-MBP:learn_branching Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	4.4 Arrays_files	Downloads		Pictures		learn_git_Again
+3.3 CSS Box Model.html	Applications		Library			Public			practice
+3.3 CSS Box Model_files	Desktop			Movies			first			tic tac toe game.js
+4.4 Arrays.html		Documents		Music			learn_branching
+Manwinders-MBP:~ Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:~ Manroop$ mkdir branch_time
+Manwinders-MBP:~ Manroop$ cd branch_time
+Manwinders-MBP:branch_time Manroop$ git init
+Initialized empty Git repository in /Users/Manroop/branch_time/.git/
+Manwinders-MBP:branch_time Manroop$ touch first.txt
+Manwinders-MBP:branch_time Manroop$ git commit -m "Hello! Have a good day"
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	first.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:branch_time Manroop$ git add .
+Manwinders-MBP:branch_time Manroop$ git commit -m "Hello! Have a good day"
+[main (root-commit) 4c82620] Hello! Have a good day
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+Manwinders-MBP:branch_time Manroop$ git checkout -b feature
+Switched to a new branch 'feature'
+Manwinders-MBP:branch_time Manroop$ touch best.txt
+Manwinders-MBP:branch_time Manroop$ git add .
+Manwinders-MBP:branch_time Manroop$ git commit -m "added best.txt"
+[feature d4e7833] added best.txt
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 best.txt
+Manwinders-MBP:branch_time Manroop$ get checkout main
+-bash: get: command not found
+Manwinders-MBP:branch_time Manroop$ git checkout main
+Switched to branch 'main'
+Manwinders-MBP:branch_time Manroop$ git merge feature
+Updating 4c82620..d4e7833
+Fast-forward
+ best.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 best.txt
+Manwinders-MBP:branch_time Manroop$ git branch -d feature
+Deleted branch feature (was d4e7833).
+Manwinders-MBP:branch_time Manroop$ git log --online --decorate
+fatal: unrecognized argument: --online
+Manwinders-MBP:branch_time Manroop$ git log --oneline --decorate
+d4e7833 (HEAD -> main) added best.txt
+4c82620 Hello! Have a good day
+Manwinders-MBP:branch_time Manroop$ clear
+
+
+Manwinders-MBP:branch_time Manroop$ mkdir practice branching_git
+Manwinders-MBP:branch_time Manroop$ ls
+best.txt	branching_git	first.txt	practice
+Manwinders-MBP:branch_time Manroop$ rm -rf branching_git
+Manwinders-MBP:branch_time Manroop$ ls
+best.txt	first.txt	practice
+Manwinders-MBP:branch_time Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ mkdir branching_git
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	4.4 Arrays_files	Downloads		Pictures		first			tic tac toe game.js
+3.3 CSS Box Model.html	Applications		Library			Public			learn_branching
+3.3 CSS Box Model_files	Desktop			Movies			branch_time		learn_git_Again
+4.4 Arrays.html		Documents		Music			branching_git		practice
+Manwinders-MBP:~ Manroop$ cd branching_git
+Manwinders-MBP:branching_git Manroop$ touch branching_git_practice.html
+Manwinders-MBP:branching_git Manroop$ touch branching_git_practice.css
+Manwinders-MBP:branching_git Manroop$ touch branching_git_practice.js
+Manwinders-MBP:branching_git Manroop$ rm branching_git_practice.css
+Manwinders-MBP:branching_git Manroop$ ls
+branching_git_practice.html	branching_git_practice.js
+Manwinders-MBP:branching_git Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_Again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		tic tac toe game.js
+4.4 Arrays.html		Library			branching_git
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ git status
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:~ Manroop$ cd learn_branching
+Manwinders-MBP:learn_branching Manroop$ ls
+first.txt	new.txt
+Manwinders-MBP:learn_branching Manroop$ git status
+On branch main
+nothing to commit, working tree clean
+Manwinders-MBP:learn_branching Manroop$ git checkout add-css
+error: pathspec 'add-css' did not match any file(s) known to git
+Manwinders-MBP:learn_branching Manroop$ git checkout -b add-css
+Switched to a new branch 'add-css'
+Manwinders-MBP:learn_branching Manroop$ ls
+first.txt	new.txt
+Manwinders-MBP:learn_branching Manroop$ touch branch.txt
+Manwinders-MBP:learn_branching Manroop$ ls
+branch.txt	first.txt	new.txt
+Manwinders-MBP:learn_branching Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:learn_branching Manroop$ git status
+On branch add-css
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	branch.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Manwinders-MBP:learn_branching Manroop$ git add .
+Manwinders-MBP:learn_branching Manroop$ git status
+On branch add-css
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   branch.txt
+
+Manwinders-MBP:learn_branching Manroop$ git checkout -b brand-new-text
+Switched to a new branch 'brand-new-text'
+Manwinders-MBP:learn_branching Manroop$ git branch
+  add-css
+* brand-new-text
+  main
+Manwinders-MBP:learn_branching Manroop$ git status
+On branch brand-new-text
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   branch.txt
+
+Manwinders-MBP:learn_branching Manroop$ git log --oneline
+497daff (HEAD -> brand-new-text, main, add-css) adding new.txt
+1289d3a initial commit
+Manwinders-MBP:learn_branching Manroop$ git checkout main
+A	branch.txt
+Switched to branch 'main'
+Manwinders-MBP:learn_branching Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:learn_branching Manroop$ ls
+branch.txt	first.txt	new.txt
+Manwinders-MBP:learn_branching Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_Again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		tic tac toe game.js
+4.4 Arrays.html		Library			branching_git
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_Again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		tic tac toe game.js
+4.4 Arrays.html		Library			branching_git
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ rm -rf first
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Applications		Movies			branching_git
+3.3 CSS Box Model.html	Desktop			Music			learn_branching
+3.3 CSS Box Model_files	Documents		Pictures		learn_git_Again
+4.4 Arrays.html		Downloads		Public			practice
+4.4 Arrays_files	Library			branch_time		tic tac toe game.js
+Manwinders-MBP:~ Manroop$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Manwinders-MBP:~ Manroop$ mkdir first
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_Again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		tic tac toe game.js
+4.4 Arrays.html		Library			branching_git
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ cd first
+Manwinders-MBP:first Manroop$ touch person.txt
+Manwinders-MBP:first Manroop$ mv person.txt another.txt
+Manwinders-MBP:first Manroop$ cp another.txt copy.txt
+Manwinders-MBP:first Manroop$ ls
+another.txt	copy.txt
+Manwinders-MBP:first Manroop$ rm copy.txt
+Manwinders-MBP:first Manroop$ cd ..
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_Again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		tic tac toe game.js
+4.4 Arrays.html		Library			branching_git
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ cp -r first second
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_Again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		second
+4.4 Arrays.html		Library			branching_git		tic tac toe game.js
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ rm -rf second
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_Again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		tic tac toe game.js
+4.4 Arrays.html		Library			branching_git
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
