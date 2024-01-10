@@ -1,0 +1,151 @@
+Last login: Wed Jan 10 17:15:53 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Manwinders-MBP:~ Manroop$ mkdir learn_git_again
+Manwinders-MBP:~ Manroop$ cd learn_git_again
+Manwinders-MBP:learn_git_again Manroop$ touch third.txt
+Manwinders-MBP:learn_git_again Manroop$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+Manwinders-MBP:learn_git_again Manroop$ git init
+Initialized empty Git repository in /Users/Manroop/learn_git_again/.git/
+Manwinders-MBP:learn_git_again Manroop$ git add .
+Manwinders-MBP:learn_git_again Manroop$ git commit -m "adding third.txt"
+[main (root-commit) 6c9dd0c] adding third.txt
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+Manwinders-MBP:learn_git_again Manroop$ git log
+commit 6c9dd0cb84d60df03f39d09f909dad3b6ea631ec (HEAD -> main)
+Author: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Wed Jan 10 17:17:29 2024 -0500
+
+    adding third.txt
+Manwinders-MBP:learn_git_again Manroop$ touch fourth.txt
+Manwinders-MBP:learn_git_again Manroop$ git add .
+Manwinders-MBP:learn_git_again Manroop$ git commit -m "adding fourth.txt"
+[main 5d2f247] adding fourth.txt
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+Manwinders-MBP:learn_git_again Manroop$ rm third.txt
+Manwinders-MBP:learn_git_again Manroop$ git diff
+diff --git a/third.txt b/third.txt
+deleted file mode 100644
+index e69de29..0000000
+Manwinders-MBP:learn_git_again Manroop$ git commit -m "removing third.txt"
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    third.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Manwinders-MBP:learn_git_again Manroop$ git add third.txt
+Manwinders-MBP:learn_git_again Manroop$ git commit -m "Removing third.txt"
+[main 9ddf9e8] Removing third.txt
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+Manwinders-MBP:learn_git_again Manroop$ git log
+commit 9ddf9e88425a7fafc922c6cf45275125bbb937c0 (HEAD -> main)
+Author: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Wed Jan 10 17:22:10 2024 -0500
+
+    Removing third.txt
+
+commit 5d2f24747dfdae11398e4ee95c062e8052296b35
+Author: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Wed Jan 10 17:18:17 2024 -0500
+
+    adding fourth.txt
+
+commit 6c9dd0cb84d60df03f39d09f909dad3b6ea631ec
+Author: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Date:   Wed Jan 10 17:17:29 2024 -0500
+
+    adding third.txt
+Manwinders-MBP:learn_git_again Manroop$ git config --global core.pager "cat"
+Manwinders-MBP:learn_git_again Manroop$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+Manwinders-MBP:learn_git_again Manroop$ git config --global --list
+core.pager=cat
+user.name=manroop
+Manwinders-MBP:learn_git_again Manroop$ 
