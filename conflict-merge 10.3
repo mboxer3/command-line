@@ -1,0 +1,87 @@
+Last login: Wed Jan 10 19:03:13 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		second
+4.4 Arrays.html		Library			branching_git		tic tac toe game.js
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ cd learn_branching
+Manwinders-MBP:learn_branching Manroop$ git checkout -b 
+error: switch `b' requires a value
+Manwinders-MBP:learn_branching Manroop$ git checkout -b "merge-conflict"
+Switched to a new branch 'merge-conflict'
+Manwinders-MBP:learn_branching Manroop$ ls
+first.txt
+Manwinders-MBP:learn_branching Manroop$ echo "Hello! have a good day" > first.txt
+Manwinders-MBP:learn_branching Manroop$ git add .
+Manwinders-MBP:learn_branching Manroop$ git commit -m "adding happy messsage"
+[merge-conflict 31f0af6] adding happy messsage
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+Manwinders-MBP:learn_branching Manroop$ git checkout main
+Switched to branch 'main'
+Manwinders-MBP:learn_branching Manroop$ ls
+first.txt
+Manwinders-MBP:learn_branching Manroop$ git checkout -b "conflict-merge"
+Switched to a new branch 'conflict-merge'
+Manwinders-MBP:learn_branching Manroop$ ls
+first.txt
+Manwinders-MBP:learn_branching Manroop$ echo "Goodbye! hope you had fun!"
+-bash: !": event not found
+Manwinders-MBP:learn_branching Manroop$ echo "Goodbye! hope you had fun!" > first.txt
+-bash: !": event not found
+Manwinders-MBP:learn_branching Manroop$ echo "goodbye" > first.txt
+Manwinders-MBP:learn_branching Manroop$ git add .
+Manwinders-MBP:learn_branching Manroop$ git commit -m "farewell"
+[conflict-merge f4f89b6] farewell
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+Manwinders-MBP:learn_branching Manroop$ git checkout main
+Switched to branch 'main'
+Manwinders-MBP:learn_branching Manroop$ git merge merge-conflict confict-merge
+merge: confict-merge - not something we can merge
+Manwinders-MBP:learn_branching Manroop$ git merge merge-conflict
+Updating 1d1c21c..31f0af6
+Fast-forward
+ first.txt | 1 +
+ 1 file changed, 1 insertion(+)
+Manwinders-MBP:learn_branching Manroop$ git conflict merge conflict-merge
+git: 'conflict' is not a git command. See 'git --help'.
+Manwinders-MBP:learn_branching Manroop$ git merge conflicy-merge
+merge: conflicy-merge - not something we can merge
+Manwinders-MBP:learn_branching Manroop$ git merge conflict merge
+merge: conflict - not something we can merge
+Manwinders-MBP:learn_branching Manroop$ git merge conflicy-merge
+merge: conflicy-merge - not something we can merge
+Manwinders-MBP:learn_branching Manroop$ git merge conflict-merge
+Auto-merging first.txt
+CONFLICT (content): Merge conflict in first.txt
+Automatic merge failed; fix conflicts and then commit the result.
+Manwinders-MBP:learn_branching Manroop$ 

@@ -1,0 +1,72 @@
+Last login: Wed Jan 10 18:25:32 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Manwinders-MBP:~ Manroop$ ls
+211 west saratoga	Desktop			Pictures		learn_git_again
+3.3 CSS Box Model.html	Documents		Public			practice
+3.3 CSS Box Model_files	Downloads		branch_time		second
+4.4 Arrays.html		Library			branching_git		tic tac toe game.js
+4.4 Arrays_files	Movies			first
+Applications		Music			learn_branching
+Manwinders-MBP:~ Manroop$ cd learn_branching
+Manwinders-MBP:learn_branching Manroop$ ls
+branch.txt	first.txt	new.txt
+Manwinders-MBP:learn_branching Manroop$ git checkout -b practice_branch
+Switched to a new branch 'practice_branch'
+Manwinders-MBP:learn_branching Manroop$ touch practice_file.txt
+Manwinders-MBP:learn_branching Manroop$ git add .
+Manwinders-MBP:learn_branching Manroop$ git commit -m "adding this"
+[practice_branch 98c39c2] adding this
+ Committer: manroop <Manroop@manwinders-mbp.mynetworksettings.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch.txt
+ create mode 100644 practice_file.txt
+Manwinders-MBP:learn_branching Manroop$ git checkout main
+Switched to branch 'main'
+Manwinders-MBP:learn_branching Manroop$ git merge practice_branch
+Updating 497daff..98c39c2
+Fast-forward
+ branch.txt        | 0
+ practice_file.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch.txt
+ create mode 100644 practice_file.txt
+Manwinders-MBP:learn_branching Manroop$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
